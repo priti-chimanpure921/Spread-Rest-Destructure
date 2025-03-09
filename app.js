@@ -48,6 +48,42 @@ function add(...args)
 let res = add(1,2,3);
 console.log("result of addition is : " , res);
 
+//Qs4.Write a function called doubleAndReturnArgs which accepts an array and a variable number of arguments.
+// The function should return a new array with the original array values and all of the additional arguments doubled.
+let array_name = ["priti","rakesh","chimanpure"];
+function doubleAndReturnArgs(arr,...args)// function accepts array and variable number of arguments
+{     
+    let new_arr = [...arr];//spread. Copy of original array
+    console.log(args);// concept of rest is used. args is a collection of indefinite number of args
+    for(let i =0 ;i<args.length;i++)
+    {
+        new_arr.push(args[i]*2);
+    }
+    console.log(new_arr);
+    return new_arr;
+}
+let answer = doubleAndReturnArgs(array_name,1,2,3);
+console.log(answer);
+console.log(doubleAndReturnArgs(numbers,1,2,3,4));
+
+// Qs5. Write a function called mergeObjects that accepts two objects and returns a new object 
+// which contains all the keys and values of the first object and second object.
+let obj3 = {
+    name : "Priti",
+    age : 36
+};
+let obj4 = {
+    city : "Nashik",
+    course : "Delta 5.0"
+};
+function mergeObjects(obj3,obj4)
+{
+    let new_obj = {...obj3, ...obj4};//concept of spread is used to copy two objects into new object
+    return new_obj;
+}
+console.log(mergeObjects(obj3,obj4));
+
+
 //Destructuring arrays 
 let names = ["Priti","Rakesh","Chimanpure"];
 let [firstName , lastName] = names ;//variables are created as per the value of array indices
