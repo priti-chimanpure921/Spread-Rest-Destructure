@@ -10,6 +10,11 @@ console.log(...numbers);
 //spread with array literals
 let newArr = [...numbers];
 console.log(newArr);
+
+newArr.forEach((ele)=>{
+    console.log(ele);
+});
+
 let str = [..."string"];// string is converted into an array using spread
 console.log(str);
 
@@ -44,7 +49,7 @@ print(2,3,1,4);
 
 function add(...args)
 {
-    return args.reduce((sum,ele)=> sum + ele );
+    return args.reduce((sum,ele)=> sum + ele );// Array methods can be applied here 
 }
 let res = add(1,2,3);
 console.log("result of addition is : " , res);
