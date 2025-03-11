@@ -10,7 +10,7 @@ console.log(...numbers);
 //spread with array literals
 let newArr = [...numbers];
 console.log(newArr);
-let str = [..."string"];
+let str = [..."string"];// string is converted into an array using spread
 console.log(str);
 
 //spread with object literals
@@ -33,6 +33,7 @@ console.log(obj2);
 //Rest concept takes indefinite number of arguments and bundle them into an array
 function print(...args)// takes indefinite number of arguments and bundle them into an array named args
 {
+    console.log(typeof(args));
     for(let i=0 ;i<args.length ; i++)
     {
         console.log(args[i]);
